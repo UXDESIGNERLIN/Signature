@@ -3,10 +3,14 @@
   "manifest_version": 3,
   "name": "Online Signature",
   "version": "1.0.0",  
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+},
   "content_scripts": [
     {
-     "matches": ["<all_urls>"],
-     "js": ["../src/index.js"]
+     "matches": ["https://google.com/*"], 
+     "js": ["/static/js/main.1d6d112a.js"]
     }
   ],
   "permissions": [
