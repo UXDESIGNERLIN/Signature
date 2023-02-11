@@ -4,10 +4,11 @@ const Signature = () => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
 
-  const startDrawing = (e) => {
-    setIsDrawing(true);
-    console.log('start')
-    draw(e);
+    const startDrawing = (e) => {
+      setIsDrawing(true);
+      const ctx = canvasRef.current.getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo(e.clientX, e.clientY);
   };
 
   const stopDrawing = () => {
@@ -21,8 +22,6 @@ const Signature = () => {
     ctx.lineCap = "round";
     ctx.lineTo(e.clientX, e.clientY);
     ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
   };
 
   const handleCopy = () => {
@@ -50,6 +49,10 @@ const Signature = () => {
       });
   };
 
+  const unDo = () => {
+
+  }
+
   return (
     <div>
       <canvas
@@ -61,6 +64,7 @@ const Signature = () => {
         onMouseMove={draw}
       />
        <button onClick={handleCopy}>Save</button>
+       <button onClick={unDo}>Undo</button>
     </div>
   );
 };
