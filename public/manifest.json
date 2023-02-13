@@ -6,14 +6,17 @@
   "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
-},
+  },
+  "icons": {
+    "16": "pencil.png",
+    "32": "pencil.png",
+    "48": "pencil.png",
+    "128": "pencil.png"
+  },
   "content_scripts": [
     {
      "matches": ["https://google.com/*"], 
-     "js": ["/static/js/main.1d6d112a.js"]
+     "js": ["/static/js/main.b711c544.js"]
     }
-  ],
-  "permissions": [
-    "history"
   ]
 }
