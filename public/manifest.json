@@ -2,21 +2,22 @@
 {
   "manifest_version": 3,
   "name": "Online Signature",
-  "version": "1.0.0",  
+  "version": "0.0.0.1",  
+  "description": "The Online Signature Chrome Extension is a privacy-friendly tool that allows users to create and save their signatures without collecting any personal data. The extension is built using React and provides a canvas for users to draw their signature. Users can then copy their signature to their clipboard and paste it into any document. The extension also provides an undo button to remove any errors made during the signature drawing process. No user data is collected or stored by the extension, ensuring complete privacy and security for all users.",
   "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
   "icons": {
-    "16": "pencil.png",
-    "32": "pencil.png",
-    "48": "pencil.png",
-    "128": "pencil.png"
+    "16": "pencil-case.png",
+    "32": "pencil-case.png",
+    "48": "pencil-case.png",
+    "128": "pencil-case.png"
   },
   "content_scripts": [
     {
      "matches": ["https://google.com/*"], 
-     "js": ["/static/js/main.b711c544.js"]
+     "js": ["/static/js/main.js"]
     }
   ]
 }
